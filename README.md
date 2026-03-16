@@ -1,10 +1,10 @@
-# 🍳 Chef Claude
+# 🍳 Smart Cook
 
 A React app that suggests recipes based on ingredients you have on hand, powered by the Anthropic Claude AI.
 
 ## Demo
 
-Add your ingredients, hit **Get a recipe**, and Chef Claude will suggest a dish you can make — formatted and ready to follow.
+Add your ingredients, hit **Get a recipe**, and Smart Cook will suggest a dish you can make — formatted and ready to follow.
 
 ## Features
 
