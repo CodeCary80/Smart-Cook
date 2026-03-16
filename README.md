@@ -6,6 +6,8 @@ A React app that suggests recipes based on ingredients you have on hand, powered
 
 Add your ingredients, hit **Get a recipe**, and Smart Cook will suggest a dish you can make — formatted and ready to follow.
 
+Live Demo: https://smartcook801.netlify.app/
+
 ## Features
 
 - Add ingredients to your list one at a time
