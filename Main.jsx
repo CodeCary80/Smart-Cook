@@ -9,6 +9,20 @@ export default function Main() {
     )
     const [recipe, setRecipe] = React.useState("")
 
+    const recipeSection = React.useRef(null)
+
+     React.useEffect(() => {
+        if (recipe !== "" && recipeSection.current !== null) {
+            // recipeSection.current.scrollIntoView({behavior: "smooth"})
+            const yCoord = recipeSection.current.getBoundingClientRect().top + window.scrollY
+            window.scroll({
+                top: yCoord,
+                behavior: "smooth"
+            })
+        }
+    }, [recipe])
+
+
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
         setRecipe(recipeMarkdown)
@@ -33,12 +47,13 @@ export default function Main() {
 
             {ingredients.length > 0 &&
                 <IngredientsList
+                    ref={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
                 />
             }
 
-            {recipe && <ClaudeRecipe recipe={recipe} />}
+            {recipe && <ClaudeRecipe recipe={recipe}  />}
         </main>
     )
 }

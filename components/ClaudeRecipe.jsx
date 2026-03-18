@@ -1,5 +1,5 @@
 import { marked } from "marked"
-import Reactç from "react"
+import React from "react"
 
 export default function ClaudeRecipe(props) {
     return (
